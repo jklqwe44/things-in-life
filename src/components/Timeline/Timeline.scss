@@ -21,11 +21,15 @@
     }
   }
 
+  .date {
+    font-weight: 500;
+  }
+
   .title {
     flex: 3;
     line-height: 26px;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 100;
   }
 
   .line {
