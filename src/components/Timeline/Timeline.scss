@@ -1,0 +1,68 @@
+.timeline {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 0 40px 0px 10px;
+
+    &:hover .delete-button {
+      display: initial;
+    }
+  }
+
+  .title {
+    flex: 3;
+    line-height: 26px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .line {
+    flex: 1;
+    height: 1px;
+    max-width: 100px;
+    width: 100%;
+    margin: 0 10px;
+    background: black;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    background: #f9f9f9;
+    border: 1px solid #c7c7c7;
+    border-left: none;
+  }
+
+  .delete-button {
+    display: none;
+    position: absolute;
+    right: 15px;
+    transform: rotate(45deg);
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
