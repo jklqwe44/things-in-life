@@ -31,7 +31,7 @@
 
   .header {
     display: flex;
-    padding: 5px 15px 5px 30px;
+    padding: 10px 15px 10px 30px;
     justify-content: space-between;
     border-bottom: 1px solid #c7c7c7;
   }
@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 10px 15px 0;
+    padding: 20px 15px 10px;
   }
 
   .row {
@@ -79,6 +79,15 @@
     font-weight: 100;
     border: 1px solid  #c7c7c7;
     border-radius: 5px;
+  }
+
+  .date {
+    flex: 5;
+
+    .react-datepicker-wrapper,
+    .input {
+      width: 100%;
+    }
   }
 
   .footer {

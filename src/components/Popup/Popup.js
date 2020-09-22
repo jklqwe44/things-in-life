@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch} from 'react-redux';
 import dayjs from "dayjs";
+import DatePicker from "react-datepicker";
 import { ADD_THINGS } from '../../reducers/timeline';
 import { CLOSE_NEW_THINGS } from '../../reducers/popup';
+
+import "react-datepicker/dist/react-datepicker.css";
 import './Popup.scss';
  
 const Popup = () =>
  {
   const dispatch = useDispatch();
   const { isOpen } = useSelector(state => state.popup)
-  const [date, setDate] = useState(dayjs().format('YYYY-MM-DD'))
+  const [date, setDate] = useState(dayjs().valueOf())
   const [title, setTitle] = useState('')
 
   const onClose = () => {
@@ -30,10 +33,7 @@ const Popup = () =>
     onClose()
   }
 
-  const handleChangeDate = e => {
-    const { target: { value } = {} } = e
-    setDate(value)
-  }
+  const handleChangeDate = date => setDate(date)
 
   const handleChangeTitle = e => {
     const { target: { value } = {} } = e
@@ -68,11 +68,14 @@ const Popup = () =>
             <div className="label">
               日期
             </div>
-            <input 
-              className="input"
-              value={date}
-              onChange={handleChangeDate}
-            />
+            <div className="date">
+              <DatePicker 
+                className="input"
+                dateFormat="yyyy-MM-dd"
+                selected={date} 
+                onChange={handleChangeDate} 
+              />
+            </div>
           </div>
           <div className="row">
             <div className="label">

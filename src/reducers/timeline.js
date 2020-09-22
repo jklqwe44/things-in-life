@@ -8,7 +8,10 @@ const EXAMPLE_LIST = [{
   title: '開發範例',
   date: dayjs('2020-9-19'),
 },{
-  title: '游泳一公里',
+  title: '開發範例',
+  date: dayjs('2020-9-17'),
+},{
+  title: '游泳',
   date: dayjs('2020-7-20'),
 },{
   title: '爬玉山',
